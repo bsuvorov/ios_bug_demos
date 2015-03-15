@@ -44,7 +44,6 @@
     self.embeddedVC.title = @"Navbar won't shrink on rotation";
     
     self.label = [[UILabel alloc] initWithFrame:self.embeddedVC.view.bounds];
-    self.label.text = @"Navbar height must change on rotation, but it doesn't change when UINavigationController is presented through a second window";
     self.label.numberOfLines = 0;
     [self.embeddedVC.view addSubview:self.label];
     
@@ -52,6 +51,9 @@
    
     self.embeddedNavVC.view.backgroundColor = [UIColor yellowColor];
     self.embeddedNavVC.view.frame = CGRectMake(5, 100, 310, 200);
+    self.embeddedNavVC.toolbarHidden = NO;
+
+    
     self.embeddedNavVC.view.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
 
     self.window.rootViewController = self;
@@ -64,6 +66,8 @@
     [super viewDidLayoutSubviews];
     self.label.frame = self.embeddedVC.view.bounds;
     self.embeddedVC.title = [NSString stringWithFormat:@"navbar height is %lld. (second window)", (long long) self.embeddedNavVC.navigationBar.frame.size.height];
+    NSString *heightOfToolbar = [NSString stringWithFormat:@"height of toolbar = %lld", (long long)self.embeddedNavVC.toolbar.frame.size.height];
+    self.label.text = [NSString stringWithFormat:@"Navbar height must change on rotation, but it doesn't change when UINavigationController is presented through a second window.\n%@", heightOfToolbar];
 }
 
 
