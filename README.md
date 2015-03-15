@@ -26,5 +26,11 @@ Compare iOS8 behavior (left) to iOS7(right). Note that correct behavior is to an
 
 ![Video iOS8 behavior](iOS8_modal_dismiss_bug/iOS8_modal_dismissal_bug.gif) ![Video iOS7 behavior](iOS8_modal_dismiss_bug/iOS7_modal_dismissal_expected_behavior.gif)
 
+#iOS navigation bar height rotation bug
+Apple HID states: "iOS automatically makes various layout changes when the size classes of a display environment change. For example, when the vertical size class changes from compact to regular, navigation bars and toolbars automatically become taller."
 
+It is true that navigation bars and toolbars do change height. they become taller in regular vertical size and shorter in compact size.
+However, once you add a second window with UINavigationViewController in there this rule breaks as seen in this demo.
+Note that one navigation bar does change its height, while another one stays as is.
 
+![Video iOS8 behavior](iOS8_navigation_bar_height_bug/iOSNavigationBarHeightBug.gif)
