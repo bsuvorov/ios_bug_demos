@@ -2,7 +2,9 @@
 Purpose of this repo is to collect demo apps for iOS bugs that I've been able to find so far.
 Sample apps are used for filing Apple Radar tickets.
 
-#iOS8 modal dismiss bug. Apple radar 20167513
+#iOS8 modal dismiss bug. 
+Apple radar 20167513
+Duped open radars http://openradar.appspot.com/18421969, http://openradar.appspot.com/18834972
 
 DismissiOS8Bug sample app demonstrates iOS8 modal dismissal regression in
 - (void)dismissViewControllerAnimated:(BOOL)flag
@@ -26,7 +28,10 @@ Compare iOS8 behavior (left) to iOS7(right). Note that correct behavior is to an
 
 ![Video iOS8 behavior](iOS8_modal_dismiss_bug/iOS8_modal_dismissal_bug.gif) ![Video iOS7 behavior](iOS8_modal_dismiss_bug/iOS7_modal_dismissal_expected_behavior.gif)
 
-#iOS navigation bar height rotation bug. Apple radar 20167526
+
+#iOS navigation bar height rotation bug. 
+Apple radar 20167526
+OpenRadar http://openradar.appspot.com/radar?id=6067412050903040
 Apple HID states: "iOS automatically makes various layout changes when the size classes of a display environment change. For example, when the vertical size class changes from compact to regular, navigation bars and toolbars automatically become taller."
 
 It is true that navigation bars and toolbars do change height. they become taller in regular vertical size and shorter in compact size.
