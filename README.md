@@ -30,6 +30,7 @@ iOS8 has a regression in dismissViewControllerAnimated:completion:
 
 Compare iOS8 behavior (left) to iOS7(right). Note that correct behavior is to animate out red screen (number 2), because it is the top most view. iOS8 however dismisses top most view without animation and animates out yellow screen (number 1)
 
+*****************Wrong behavior iOS8**********************************Correct behavior iOS7*******************
 ![Video iOS8 behavior](iOS8_modal_dismiss_bug/iOS8_modal_dismissal_bug.gif) ![Video iOS7 behavior](iOS8_modal_dismiss_bug/iOS7_modal_dismissal_expected_behavior.gif)
 
 
