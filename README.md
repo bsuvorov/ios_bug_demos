@@ -48,3 +48,17 @@ Note that one navigation bar does change its height, while another one stays as 
 Toolbar height change works correctly, that's why it is missing from the demo.
 
 ![Video iOS8 behavior](iOS8_navigation_bar_height_bug/iOSNavigationBarHeightBug.gif)
+
+#iPad vs iPhone UIBarButtonItem view changes on rotation
+It is possible to find out view of UIBarButtonItem by doing following hack 
+
+UIView *view = [tabBarItem valueForKey:@"view"]
+
+Sometimes you need this to obtain location of the UIBarButtonItem to present something from it.
+
+However, iPhone and iPad behave differently. iPhone sometimes creates new view for UIBarButtonItem in the UIToolbar which can breakiyour code if you save pointer to view of UIBarButtonItem.
+
+See for yourself.
+
+![Video iPhone rotation](RecreatedTabBarItems/Toolbar_Bar_Button_iPhone_rotation_new_view.gif)
+![Video iPad rotation](RecreatedTabBarItems/Toolbar_Bar_Button_iPad_rotation_same_view.gif)
