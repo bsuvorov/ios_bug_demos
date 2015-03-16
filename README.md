@@ -60,5 +60,10 @@ However, iPhone and iPad behave differently. iPhone sometimes creates new view f
 
 See for yourself.
 
+iPhone changes UIView address in the end on third rotation.
+
 ![Video iPhone rotation](RecreatedTabBarItems/Toolbar_Bar_Button_iPhone_rotation_new_view.gif)
+
+iPad sticks to existing UIView address despite all the rotations.
+
 ![Video iPad rotation](RecreatedTabBarItems/Toolbar_Bar_Button_iPad_rotation_same_view.gif)
